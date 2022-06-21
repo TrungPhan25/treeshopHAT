@@ -57,7 +57,10 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
-
+Route::get('/categorys', [
+    \App\Http\Controllers\MainController::class,
+    'Categorys',
+])->name('Categorys');
 Route::get('/', [App\Http\Controllers\MainController::class, 'index']);
 Route::post('/services/load-product',[App\Http\Controllers\MainController::class, 'loadProduct']);
 Route::get('/danh-muc/{id}-{slug}.html', [\App\Http\Controllers\CategoryController::class, 'index']);
