@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d49acf74-4385-4349-90a5-04b8728f609c" name="Changes" comment="fix bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/Product/ProductAdminService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Product/ProductAdminService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/Slider/SliderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Slider/SliderService.php" afterDir="false" />
+>>>>>>> d3cf617600c1d620bdc1103d084ee973573cfc3c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,11 @@
         <option name="argument" value="--tags" />
         <option name="title" value="All" />
       </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -154,7 +164,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -163,13 +172,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\XAMPP\htdocs\treeshopHAT\resources\views\component" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -193,9 +196,13 @@
       <workItem from="1655794086555" duration="2491000" />
       <workItem from="1655805241325" duration="5494000" />
       <workItem from="1655817345868" duration="80000" />
+<<<<<<< HEAD
       <workItem from="1655818022548" duration="1277000" />
       <workItem from="1655822432344" duration="191000" />
       <workItem from="1655822692481" duration="3127000" />
+=======
+      <workItem from="1655818022548" duration="2975000" />
+>>>>>>> d3cf617600c1d620bdc1103d084ee973573cfc3c
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1655740081728</created>
@@ -233,16 +240,5 @@
     <MESSAGE value="test 51" />
     <MESSAGE value="fix bug" />
     <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/component/header.blade.php</url>
-          <line>39</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
