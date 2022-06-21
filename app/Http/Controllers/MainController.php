@@ -25,10 +25,20 @@ class MainController extends Controller
             'title'=>'Shop bán hoa HAT',
             'sliders'=>$this->slider->show(),
             'categories'=>$this->category->show(),
-            'products'=>$this->product->get()
+            'products'=>$this->product->get(),
+            'productsID' => $this->product->getID()
         ]);
     }
-
+    public function Categorys()
+    {
+        return view('categorys', [
+            'title' => 'Tất cả sản phẩm',
+            'sliders' => $this->slider->show(),
+            'categories' => $this->category->show(),
+            'products' => $this->product->get(),
+            'productsID' => $this->product->getID(),
+        ]);
+    }
     public function loadProduct(Request $request)
     {
         $page = $request->input('page', 0);

@@ -18,6 +18,13 @@ class ProductService
             ->limit(self::LIMIT)
             ->get();
     }
+    public function getID($page =null){
+        return Product::select('id','name','price','price_sale','avatar','category_id')
+            ->where('category_id',1)
+            ->orderByDesc('id')
+            ->limit(8)
+            ->get();
+    }
     public function show($id)
     {
         return Product::where('id',$id)
