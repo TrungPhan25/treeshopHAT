@@ -70,6 +70,6 @@ Route::post('update-cart', [ CartController::class,'update']);
 Route::get('carts/delete/{id}', [CartController::class, 'remove']);
 Route::post('/carts', [ CartController::class,'addCart']);
 
-
+#cmt
 
 
