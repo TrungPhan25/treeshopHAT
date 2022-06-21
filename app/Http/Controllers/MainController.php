@@ -21,11 +21,12 @@ class MainController extends Controller
 
 
     public function index(){
-        return view('home',[
-            'title'=>'Shop bán hoa HAT',
-            'sliders'=>$this->slider->show(),
-            'categories'=>$this->category->show(),
-            'products'=>$this->product->get()
+        return view('home', [
+            'title' => 'Shop bán hoa HAT',
+            'sliders' => $this->slider->show(),
+            'categories' => $this->category->show(),
+            'products' => $this->product->getindex(),
+            'productsID' => $this->product->getID(),
         ]);
     }
 

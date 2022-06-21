@@ -4,7 +4,7 @@
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href={{URL::asset('template/images/icons/favicon.png')}}/>
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href={{URL::asset('template/vendor/bootstrap/css/bootstrap.min.css')}}>
+<!-- <link rel="stylesheet" type="text/css" href={{URL::asset('template/vendor/bootstrap/css/bootstrap.min.css')}}> -->
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href={{URL::asset('template/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}>
 <!--===============================================================================================-->
@@ -32,8 +32,8 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href={{URL::asset('template/css/util.css')}}>
 <link rel="stylesheet" type="text/css" href={{URL::asset('template/css/main.css')}}>
-<link rel="stylesheet" type="text/css" href={{URL::asset('template/css/style.css')}}>
-
+<!-- <link rel="stylesheet" type="text/css" href={{URL::asset('template/css/style.css')}}> -->
+<link rel="stylesheet" type="text/css" href={{URL::asset('template/css/style1.css')}}>
 <!--===============================================================================================-->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <style>
