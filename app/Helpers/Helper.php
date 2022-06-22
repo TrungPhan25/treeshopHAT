@@ -64,7 +64,7 @@ class Helper
                             ' . $category->name . '
                         </a>';
 
-                unset($categories[$key]);
+
 
                 if (self::isChild($categories, $category->id)) {
                     $html .= '<ul class="sub-menu">';
