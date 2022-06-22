@@ -190,30 +190,34 @@
                                                                         </div>
                                                                         <div class="form-product">
                                                                             <form
-                                                                                action="javascript:void(0);"
+                                                                                action="/treeshopHAT/public/add-cart"
                                                                                 id="add-to-cart-form"
                                                                                 class="form-inline has-validation-callback"
+                                                                                method="post"
                                                                             >
                                                                                 <div class="clearfix form-group">
                                                                                     <div
                                                                                         class="custom custom-btn-number form-control"
                                                                                     >
                                                                                         <button
-                                                                                            onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty) &amp; qty > 1 ) result.value--;return false;"
+                                                                                           
                                                                                             class="btn-minus btn-cts"
                                                                                             type="button"
                                                                                         >
                                                                                             –
                                                                                         </button>
                                                                                         <input type="text" maxlength="3" class="qty input-text item_quantity" id="qty" name="quantity" size="4" value="1"/>
-                                                                                        <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;" class="btn-plus btn-cts" type="button">
+                                                                                        <button  class="btn-plus btn-cts" type="button">
                                                                                             +
                                                                                         </button>
                                                                                     </div>
                                                                                     <div class="btn-mua">
-                                                                                        <button type="submit" data-role="addtocart" class="btn btn-lg btn-gray btn-cart btn_buy add_to_cart item_add" id="s1"><span class="txt-main">
+                                                                                        <button type="submit"  class="btn btn-lg btn-gray btn-cart btn_buy add_to_cart item_add" id="s1"><span class="txt-main">
+                                                                                       
                                                                                                 <i class="fa fa-cart-arrow-down padding-right-10"></i>Mua ngay</span>
+                                       
                                                                                         </button>
+                                                                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
                                                                                     </div>
                                                                                 </div>
                                                                             </form>
