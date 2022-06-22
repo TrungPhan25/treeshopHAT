@@ -536,6 +536,7 @@ class ComposerStaticInit3994e983e3cf6974a6dfd9b436fe1aec
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Helpers\\Helper' => __DIR__ . '/../..' . '/app/Helpers/Helper.php',
+        'App\\Http\\Controllers\\Admin\\CartController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CartController.php',
         'App\\Http\\Controllers\\Admin\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CategoriesController.php',
         'App\\Http\\Controllers\\Admin\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/MainController.php',
         'App\\Http\\Controllers\\Admin\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProductController.php',

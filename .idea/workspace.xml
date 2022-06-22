@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="30cb9502-7dd2-4129-8bae-60f86613a123" name="Changes" comment="fix bug">
+      <change beforePath="$PROJECT_DIR$/app/Helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" afterDir="false" />
     <list default="true" id="d49acf74-4385-4349-90a5-04b8728f609c" name="Changes" comment="fix bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/Product/ProductAdminService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Product/ProductAdminService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/Slider/SliderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Slider/SliderService.php" afterDir="false" />
->>>>>>> d3cf617600c1d620bdc1103d084ee973573cfc3c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,13 +193,9 @@
       <workItem from="1655794086555" duration="2491000" />
       <workItem from="1655805241325" duration="5494000" />
       <workItem from="1655817345868" duration="80000" />
-<<<<<<< HEAD
       <workItem from="1655818022548" duration="1277000" />
       <workItem from="1655822432344" duration="191000" />
       <workItem from="1655822692481" duration="3127000" />
-=======
-      <workItem from="1655818022548" duration="2975000" />
->>>>>>> d3cf617600c1d620bdc1103d084ee973573cfc3c
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1655740081728</created>

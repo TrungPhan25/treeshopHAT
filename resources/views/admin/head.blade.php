@@ -23,4 +23,7 @@
     .hidden {
         display: none;
     }
+    .ml16{
+        margin-left: 24px;
+    }
 </style>
