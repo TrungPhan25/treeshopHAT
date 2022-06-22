@@ -5,15 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Services\CartService;
 use Illuminate\Support\Facades\Session;
-
+use App\Http\Services\Category\CategoryService;
 
 class CartController extends Controller
 {
     protected $cartService;
+    protected $category;
 
-    public function __construct(CartService $cartService)
+    public function __construct(CartService $cartService,CategoryService $category)
     {
         $this->cartService = $cartService;
+        $this->category= $category;
     }
 
     public function index(Request $request)
@@ -35,6 +37,7 @@ class CartController extends Controller
         return view('carts.list', [
             'title' => 'Giỏ Hàng',
             'products' => $products,
+            'categories'=>$this->category->show(),
             'carts' => Session::get('carts')
         ]);
 
