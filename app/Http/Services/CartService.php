@@ -69,6 +69,13 @@ class CartService
         return true;
     }
 
+    public function updateStatus($customer,$request){
+        $customer->fill($request->input());
+        $customer->save();
+        Session::flash('success', 'Cập nhật Slider thành công');
+        return true;
+    }
+
     public function remove($id)
     {
         $carts = Session::get('carts');

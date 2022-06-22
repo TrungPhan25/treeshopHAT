@@ -33,4 +33,10 @@ class CartController extends Controller
             'carts' => $carts
         ]);
     }
+    public function update(Customer $customer,Request $request){
+        $result =$this->cart->updateStatus($customer,$request);
+        if ($result) {
+            return redirect('/admin/customers');
+        }
+    }
 }

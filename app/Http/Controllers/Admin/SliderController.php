@@ -50,7 +50,6 @@ class SliderController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'avatar' => 'required',
-
         ]);
 
         $result = $this->slider->update($request, $slider);
