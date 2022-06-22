@@ -46,9 +46,9 @@ class Helper
 
     public static function statusCustomer($status = 0): string
     {
-        return $status == 1 ? '<span class="btn btn-danger btn-xs ">Chưa xác nhận</span>' :
-            ($status == 2 ? '<span class="btn btn-danger btn-xs ">Đã xác nhận</span>' : (
-            $status == 3 ? '<span class="btn btn-danger btn-xs">Đang giao</span>' :
+        return $status == 1 ? '<span class="btn btn-danger btn-xs " >Chưa xác nhận</span>' :
+            ($status == 2 ? '<span class="btn btn-warning btn-xs ">Đã xác nhận</span>' : (
+            $status == 3 ? '<span class="btn btn-light btn-xs">Đang giao</span>' :
                 '<span class="btn btn-success btn-xs">Đã giao</span>'
             ));
     }
