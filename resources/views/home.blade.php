@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-              
+
         <h1 class="hidden">Ant Green blogger theme</h1>
                 <section class='awe-section-1'>
                     <div class='section' id='top-sliders' maxwidgets='1' name='Slide ảnh' showaddelement='yes'>
@@ -21,12 +21,12 @@
                                             <!-- Full-width images with number and caption text -->
                                             @foreach($sliders as $slider)
                                             <div class="mySlider fadee">
-                                                
+
                                                 <img src="{{ $slider->avatar }}" style="width:100%">
-                                                
+
                                             </div>
                                             @endforeach
-                                           
+
 
 <!-- Next and previous buttons -->
 <a class="prevv" onclick="plusSlides(-1)">&#10094;</a>
@@ -40,8 +40,8 @@
 <span class="dot" onclick="currentSlide(2)"></span>
 <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-                                  
-                                    </div>  
+
+                                    </div>
                                     </div>
                                 </div>
                                 <div class='includable' id='main'>
@@ -156,18 +156,18 @@
 
                                         </div>
                                     </div>
-                                    
+
                                     <ul id="hot">
                                         <li>
                                             <div class="row">
 
-                 
+
 
                                                 @foreach($products as $key =>$product)
                                                 <div class="owl-item col-md-3">
                                                     <div class = "simpleCart_shelfItem">
                                                         <div class="ant-single-product">
-                                                            <div class="ant-single-product-image">
+                                                            <div class="ant-single-product-image zoom_pic">
                                                                 <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html">
                                                                     <img src="{{ $product->avatar }}" alt="{{ $product->name }}'" class="img-responsive center-block item_thumb" /></a>
                                                                 <span class="discount-label discount-label--green">-6%</span>
@@ -302,7 +302,7 @@
                                     </div>
 
                                     <script src="/feeds/posts/default/-/san-pham?max-results=8&amp;orderby=published&amp;alt=json-in-script&amp;callback=labelproductall"></script>
-                                    
+
                                     @foreach($productsID as $product)
                                     <div class="col-md-15 col-sm-3 col-xs-6">
                                         <div class="ant-single-product simpleCart_shelfItem">
@@ -339,7 +339,7 @@
                                                         title="Cây Cọ Nhật B"
                                                     >{{$product->name}}</a
                                                     >
-                                                   
+
                                                 </h3>
                                                 <div class="product-price">
                                                 <span class="price item_price">{{$product->price}} VNĐ</span>
@@ -348,7 +348,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                 @endforeach
 
                                 </div>
@@ -372,7 +372,7 @@
                                     <div class="owl-stage-outer">
                                         <div
                                             class="owl-stage"
-                          
+
                                         >
                                             <div class="owl-item " style="width: 237.5px">
                                                 <div class="item section_policy_content">
