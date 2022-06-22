@@ -36,8 +36,9 @@
                                 <div class="owl-item col-md-3">
                                     <div class = "simpleCart_shelfItem">
                                         <div class="ant-single-product">
-                                            <div class="ant-single-product-image">
-                                                <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html"><img src="{{ $product->avatar }}" alt="{{ $product->name }}'" class="img-responsive center-block item_thumb" /></a>
+                                            <div class="ant-single-product-image zoom_pic">
+                                                <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html">
+                                                    <img src="{{ $product->avatar }}" alt="{{ $product->name }}'" class="img-responsive center-block item_thumb" /></a>
                                                 <span class="discount-label discount-label--green">-6%</span>
                                                 <form action="javascript:void(0);" class="hover-icons hidden-sm hidden-xs variants form-nut-grid form-ajaxtocart">
                                                     <a class="button ajax_addtocart add_to_cart item_add" href="javascript:void(0);" title="Mua ngay"></a>

@@ -6,7 +6,7 @@
     @if (count($products) != 0)
 
         <div class="container">
-            <div class="row">
+            <div class="row cart_titel">
                 <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
                     <div class="m-l-25 m-r--38 m-lr-0-xl">
                         <div class="wrap-table-shopping-cart">
@@ -16,11 +16,11 @@
                             <table class="table-shopping-cart">
                                 <tbody>
                                 <tr class="table_head">
-                                    <th class="column-1">Product</th>
-                                    <th class="column-2"></th>
-                                    <th class="column-3">Price</th>
-                                    <th class="column-4">Quantity</th>
-                                    <th class="column-5">Total</th>
+                                    <th class="column-1"></th>
+                                    <th class="column-2">Sản phẩm</th>
+                                    <th class="column-3">Giá</th>
+                                    <th class="column-4">Số lượng</th>
+                                    <th class="column-5">Tổng tiền</th>
                                     <th class="column-6">&nbsp;</th>
 
                                 </tr>
@@ -43,10 +43,7 @@
                                             <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
                                                 <i class="fs-16 zmdi zmdi-minus"></i>
                                             </div>
-
-                                            <input class="mtext-104 cl3 txt-center num-product" type="number"
-                                                   name="num_product[{{$product->id }}]" value="{{$carts[$product->id]}}">
-
+                                            <input class="mtext-104 cl3 txt-center num-product bx-10" type="number" name="num_product[{{$product->id }}]" value="{{$carts[$product->id]}}">
                                             <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                                 <i class="fs-16 zmdi zmdi-plus"></i>
                                             </div>
