@@ -7,7 +7,7 @@ use App\Models\Product;
 
 class ProductService
 {
-    const LIMIT =4;
+    const LIMIT =16;
 
     public function get($page =null){
         return Product::query()->select('id','name','price','price_sale','avatar')
@@ -17,7 +17,7 @@ class ProductService
             })->paginate(self::LIMIT);
     }
     public function getfour($page =null){
-        return Product::query()->select('id','name','price','price_sale','avatar')
+        return Product::query()->select('id','name','price','price_sale','avatar','updated_at')
             ->orderByDesc('id')
             ->when ($page != null, function ($query) use ($page){
                 $query->offset($page * self::LIMIT);
@@ -27,13 +27,12 @@ class ProductService
     }
     public function geteight($page =null){
         return Product::query()->select('id','name','price','price_sale','avatar','updated_at')
-          
-
+ ->orderBy('id','desc')
             ->limit(8)
             ->get();
     }
     public function gettwe($page =null){
-        return Product::query()->select('id','name','price','price_sale','avatar')
+        return Product::query()->select('id','name','price','price_sale','avatar','updated_at')
             ->orderByDesc('id')
             ->when ($page != null, function ($query) use ($page){
                 $query->offset($page * self::LIMIT);
@@ -42,7 +41,7 @@ class ProductService
             ->get();
     }
     public function getsixteen($page =null){
-        return Product::query()->select('id','name','price','price_sale','avatar')
+        return Product::query()->select('id','name','price','price_sale','avatar','updated_at')
             ->orderByDesc('id')
             ->when ($page != null, function ($query) use ($page){
                 $query->offset($page * self::LIMIT);
@@ -51,7 +50,7 @@ class ProductService
             ->get();
     }
     public function getID($page =null){
-        return Product::select('id','name','price','price_sale','avatar','category_id')
+        return Product::select('id','name','price','price_sale','avatar','category_id','updated_at')
             ->where('category_id',2)
             ->orderByDesc('id')
             ->limit(8)
@@ -65,7 +64,7 @@ class ProductService
             ->firstOrFail();
     }
     public function more($id){
-        return Product::select('id','name','price','price_sale','avatar')
+        return Product::select('id','name','price','price_sale','avatar','updated_at')
             ->where('status',1)
             ->where('id','!=',$id)
             ->orderByDesc('id')

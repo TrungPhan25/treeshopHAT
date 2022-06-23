@@ -12,7 +12,7 @@ use App\Models\Product;
 
 class MainController extends Controller
 {
-    const LIMIT =4;
+    const LIMIT =16;
     protected $slider;
     protected $category;
     protected $product;

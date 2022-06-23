@@ -156,18 +156,18 @@
 
 
 
-                                                @foreach($products as $key =>$product)
+                                                @foreach($products as $product)
 
-                                                    @if(now()->diffInDays($product->updated_at) < 1)
+
                                                 <div class="owl-item col-md-3">
                                                     <div class = "simpleCart_shelfItem">
                                                         <div class="ant-single-product">
                                                             <div class="ant-single-product-image zoom_pic">
                                                                 <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html">
                                                                     <img src="{{ $product->avatar }}" alt="{{ $product->name }}'" class="img-responsive center-block item_thumb" /></a>
-
+                                                                @if(now()->diffInDays($product->updated_at) < 1)
                                                                 <span class="discount-label discount-label--green">New</span>
-
+                                                                @endif
                                                                 <form action="" class="hover-icons hidden-sm hidden-xs variants form-nut-grid form-ajaxtocart">
                                                                     <a class="button ajax_addtocart add_to_cart item_add " onclick="" href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html" title="Mua ngay"
                                                                        ></a>
@@ -194,8 +194,9 @@
                                                     </div>
                                                 </div>
 
-                                                    @endif
+
                                                 @endforeach
+
                                             </div>
 
                                         </li>
