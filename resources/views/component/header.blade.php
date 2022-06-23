@@ -130,7 +130,7 @@
                                     <ul class="level0 col-md-9 no-padding">
                                         @foreach($categories as $category)
                                         <li class="level1 parent item">
-                                            <a class="hmega" href="#">
+                                            <a class="hmega" href="/treeshopHAT/public/danh-muc/{{ $category->id }}-{{ Str::slug($category->name, '-') }}.html">
                                                {{$category->name}}
                                             </a>
                                             <ul class="level1">
@@ -139,7 +139,8 @@
 
 
                                                          @foreach($category-> categoryChilden as $categoryChilden)
-                                                          {{$categoryChilden->name}}
+
+                                                             <a href="/treeshopHAT/public/danh-muc/{{ $categoryChilden->id }}-{{ Str::slug($categoryChilden->name, '-') }}.html">{{$categoryChilden->name}}</a>
                                                           @endforeach
 
 
