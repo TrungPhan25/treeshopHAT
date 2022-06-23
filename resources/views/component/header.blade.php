@@ -136,9 +136,11 @@
                                             <ul class="level1">
                                                 <li class="level2">
                                                     <a href="/search/label/tieu-canh-terrarium">
+
                                                          @foreach($category-> categoryChilden as $categoryChilden)
                                                           {{$categoryChilden->name}}
-                                                          @endforeach 
+                                                          @endforeach
+
                                                     </a>
                                                 </li>
                                             </ul>

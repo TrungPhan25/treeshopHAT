@@ -82,10 +82,10 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </button>
                                             <div class="dropdown-container">
-{{--                                                @foreach($category-> categoryChilden as $categoryChilden)--}}
-{{--                                                <a href="/search/label/{{$categoryChilden->name}}">--}}
-{{--                                                    {{$categoryChilden->name}}--}}
-{{--                                                    @endforeach</a>--}}
+                                                @foreach($category-> categoryChilden as $categoryChilden)
+                                                <a href="/search/label/{{$categoryChilden->name}}">
+                                                    {{$categoryChilden->name}}
+                                                    @endforeach</a>
                                             </div>
                                         </li>
                                         @endforeach
@@ -94,15 +94,7 @@
                             </nav>
                         </div>
                     </aside>
-                    <!-- <div class='aside-item'>
-                        <div class='heading'>
-                            <h2 class='title-head'><a href='tin-tuc' title='Xem nhiều nhất'>Xem nhiều nhất</a></h2>
-                        </div>
-                        <div class='list-blogs'>
 
-                        </div>
-                        <div class='blogs-mores text-center'><a href='tin-tuc' title='Xem thêm'>Xem thêm</a></div>
-                    </div> -->
 
             </div>
         </div>

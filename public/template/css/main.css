@@ -813,7 +813,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .sidebar {
     position: fixed;
-    z-index: 1100;
+
     width: 390px;
     max-width: calc(100% - 30px);
     height: auto;
