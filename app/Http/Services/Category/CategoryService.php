@@ -3,6 +3,7 @@
 namespace App\Http\Services\Category;
 
 use App\Models\categories;
+use App\Models\Product;
 use Illuminate\Support\Facades\Session;
 
 class CategoryService
@@ -79,4 +80,18 @@ class CategoryService
                 ->paginate(12)
                 ->withQueryString();
         }
+    public function getProductall($request){
+        $query = Product::
+            select('id', 'name', 'price', 'price_sale', 'avatar')
+            ->where('status', 1);
+
+        if ($request->input('price')) {
+            $query->orderBy('price', $request->input('price'));
+        }
+
+        return $query
+            ->orderByDesc('id')
+            ->paginate(12)
+            ->withQueryString();
+    }
 }
