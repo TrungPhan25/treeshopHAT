@@ -69,7 +69,7 @@
                         <div class="widget-content">
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="single-banner">
-                                    <a class="box-img" href="/search/label/all" title="Mùa Tết">
+                                    <a class="box-img" href="./categorys" title="Mùa Tết">
                                         <img
                                             alt="Mùa Tết"
                                             class="img-responsive center-block"
@@ -92,7 +92,7 @@
                                 <div class="single-banner">
                                     <a
                                         class="box-img"
-                                        href="/search/label/san-pham"
+                                        href="./categorys"
                                         title="Đón tết"
                                     >
                                         <img
@@ -113,7 +113,7 @@
                                 <div class="single-banner">
                                     <a
                                         class="box-img"
-                                        href="/search/label/san-pham"
+                                        href="./categorys"
                                         title="Flash Sale"
                                     >
                                         <img
@@ -184,8 +184,13 @@
                                                                     <p style = "display:none;" class = "item_name">  </p>
                                                                 </h3>
                                                                 <div class="product-price">
-                                                                    <span class="price item_price">{{$product->price}} VNĐ</span>
-                                                                    <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                                    @if($product->price_sale != 0 )
+                                                                    <span class="price item_price">{{$product->price_sale}} VNĐ</span>
+                                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                                       @else
+                                                                        <span class="price item_price">{{$product->price}} VNĐ</span>
+                                                                    @endif
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -198,37 +203,7 @@
                                         </li>
 
 
-                                        <li>
-                                            <div class="row">
-                                                @foreach($products as $key =>$product)
-                                                    <div class="owl-item col-md-3">
-                                                        <div class = "simpleCart_shelfItem">
-                                                            <div class="ant-single-product">
-                                                                <div class="ant-single-product-image">
-                                                                    <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html"><img src="{{ $product->avatar }}" alt="{{ $product->name }}'"class="img-responsive center-block item_thumb" /></a>
-                                                                    <span class="discount-label discount-label--green">-6%</span>
-                                                                    <form action="javascript:void(0);" class="hover-icons hidden-sm hidden-xs variants form-nut-grid form-ajaxtocart">
-                                                                        <a class="button ajax_addtocart add_to_cart item_add" href="javascript:void(0);" title="Mua ngay"></a>
-                                                                        <a class="add-to-cart quick-view quickview" href="'+t+'" title="Xem nhanh"></a>
-                                                                    </form>
-                                                                </div>
-                                                                <div class="ant-product-border">
-                                                                    <h3 class="product-title">
-                                                                    <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html"> {{$product->name}}</a>
-                                                                        <p style = "display:none;" class = "item_name">  </p>
-                                                                    </h3>
-                                                                    <div class="product-price">
-                                                                        <span class="price item_price">{{$product->price}} VNĐ</span>
-                                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
-                                                @endforeach
-                                            </div>
-                                        </li>
                                     </ul>
 
                                 </div>
@@ -251,7 +226,7 @@
                                             Hãy đi tìm loài cây mang lại tài lộc, may mắn cho gia
                                             chủ trong năm 2022
                                         </p>
-                                        <a href="/search/label/san-pham" title="Khám phá ngay">
+                                        <a href="./categorys" title="Khám phá ngay">
                                             Khám phá ngay
                                         </a>
                                     </div>
@@ -306,7 +281,7 @@
                                     @foreach($productsID as $product)
                                     <div class="col-md-15 col-sm-3 col-xs-6">
                                         <div class="ant-single-product simpleCart_shelfItem">
-                                            <div class="ant-single-product-image">
+                                            <div class="ant-single-product-image zoom_pic">
                                             <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html">
                                                 <img
                                                 src="{{ $product->avatar }}"
@@ -321,7 +296,6 @@
                                                 >
                                                     <a
                                                         class="button ajax_addtocart add_to_cart item_add"
-                                                        href="javascript:void(0);"
                                                         title="Mua ngay"
                                                         id="s11"
                                                     ></a>
@@ -342,8 +316,12 @@
 
                                                 </h3>
                                                 <div class="product-price">
-                                                <span class="price item_price">{{$product->price}} VNĐ</span>
-                                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                    @if($product->price_sale != 0 )
+                                                        <span class="price item_price">{{$product->price_sale}} VNĐ</span>
+                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                    @else
+                                                        <span class="price item_price">{{$product->price}} VNĐ</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

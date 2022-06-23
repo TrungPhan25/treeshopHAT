@@ -238,7 +238,7 @@
                                                    <div class="ant-single-product-image zoom_pic">
                                                       <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html">
                                                           <img src="{{ $product->avatar }}"
-                                                         alt="{{ $product->name }}'" 
+                                                         alt="{{ $product->name }}'"
                                                          class="img-responsive center-block item_thumb"
                                                          /></a>
                                                       <span
@@ -265,17 +265,17 @@
                                                       <h3 class="product-title">
                                                          <a
                                                             href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html"
-                                                            title="{{ $product->name }}'" 
+                                                            title="{{ $product->name }}'"
                                                             >{{$product->name}}</a
                                                             >
                                                       </h3>
                                                       <div class="product-price">
-                                                         <span class="price item_price"
-                                                            >{{$product->price}}</span
-                                                            >
-                                                         <span class="price-before-discount"
-                                                            >{{$product->price}}</span
-                                                            >
+                                                          @if($product->price_sale != 0 )
+                                                              <span class="price item_price">{{$product->price_sale}} VNĐ</span>
+                                                              <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                          @else
+                                                              <span class="price item_price">{{$product->price}} VNĐ</span>
+                                                          @endif
                                                       </div>
                                                    </div>
                                                 </div>
@@ -465,10 +465,12 @@
                                                       ></i>
                                                 </div>
                                                 <div class="product-price-and-shipping">
-                                                   <span class="price">{{$product->price}}đ</span
-                                                      ><span class="regular-price"
-                                                      >{{$product->price}}đ</span
-                                                      >
+                                                    @if($product->price_sale != 0 )
+                                                        <span class="price item_price">{{$product->price_sale}} VNĐ</span>
+                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                    @else
+                                                        <span class="price item_price">{{$product->price}} VNĐ</span>
+                                                    @endif
                                                 </div>
                                              </div>
                                           </div>

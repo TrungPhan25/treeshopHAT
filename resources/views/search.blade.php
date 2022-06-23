@@ -51,8 +51,12 @@
                                                             <p style = "display:none;" class = "item_name"> Mã: '+g+" - "+r+' </p>
                                                         </h3>
                                                         <div class="product-price">
-                                                            <span class="price item_price">{{$item->price}} </span>
-                                                            <span class="price-before-discount">{{$item->price}} </span>
+                                                            @if($item->price_sale != 0 )
+                                                                <span class="price item_price">{{$item->price_sale}} VNĐ</span>
+                                                                <span class="price-before-discount">{{$item->price}} VNĐ</span>
+                                                            @else
+                                                                <span class="price item_price">{{$item->price}} VNĐ</span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>
@@ -72,196 +76,24 @@
                             </div>
                             <div class='aside-content'>
                                 <nav class='nav-category navbar-toggleable-md'>
-                                    <ul class='nav navbar-pills'>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/tieu-canh-de-ban' title='Tiểu Cảnh Để Bàn'> Tiểu Cảnh Để Bàn</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/tieu-canh-terrarium' title='Tiểu Cảnh Terrarium'>Tiểu Cảnh Terrarium</a>
-                                                </li>
-
-
-
-                                            </ul>
+                                    @foreach($categories as $category)
+                                        <li>
+                                            <button class="dropdown-btn">
+                                                <i class="fa fa-caret-right"></i>  {{$category->name}}
+                                                <i class="fa fa-angle-down"></i>
+                                            </button>
+                                            <div class="dropdown-container">
+                                                @foreach($category-> categoryChilden as $categoryChilden)
+                                                    <a href="/search/label/{{$categoryChilden->name}}">
+                                                        {{$categoryChilden->name}}
+                                                        @endforeach</a>
+                                            </div>
                                         </li>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/chau-canh-de-ban' title='Chậu Cảnh Để Bàn'> Chậu Cảnh Để Bàn</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/chau-trung-oasis' title='Chậu Trứng Oasis'>Chậu Trứng Oasis</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-phong-thuy' title='Cây Phong Thủy'>Cây Phong Thủy</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-canh-de-ban' title='Cây Cảnh Để Bàn'>Cây Cảnh Để Bàn</a>
-                                                </li>
-
-
-
-                                            </ul>
-                                        </li>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/cay-canh-mini' title='Cây Cảnh Mini'> Cây Cảnh Mini</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-terrarium' title='Cây Terrarium'>Cây Terrarium</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-khong-khi' title='Cây Không Khí'>Cây Không Khí</a>
-                                                </li>
-
-
-
-                                            </ul>
-                                        </li>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/phu-kien-trang-tri' title='Phụ Kiện Trang Trí'> Phụ Kiện Trang Trí</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/binh-thuy-tinh' title='Bình Thủy Tinh'>Bình Thủy Tinh</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/phu-kien-terrarium' title='Phụ Kiện Terrarium'>Phụ Kiện Terrarium</a>
-                                                </li>
-
-
-
-                                            </ul>
-                                        </li>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/chau-trong-cay' title='Chậu trồng cây'> Chậu trồng cây</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/chau-da-mai-trong-cay' title='Chậu đá mài trồng cây'>Chậu đá mài trồng cây</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/chau-gom-su-trong-cay' title='Chậu gốm sứ trồng cây'>Chậu gốm sứ trồng cây</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/chau-composite' title='Chậu Composite'>Chậu Composite</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/chau-xi-mang' title='Chậu xi măng'>Chậu xi măng</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/chau-khay-nhua-trong-cay' title='Chậu, Khay nhựa trồng cây'>Chậu, Khay nhựa trồng cây</a>
-                                                </li>
-
-
-
-                                            </ul>
-                                        </li>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/hoa-chau' title='Hoa chậu'> Hoa chậu</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/hoa-chau-treo' title='Hoa chậu treo'>Hoa chậu treo</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/hoa-tet' title='Hoa Tết'>Hoa Tết</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/hoa-tet-1' title='Hoa Tết'>Hoa Tết</a>
-                                                </li>
-
-
-
-                                            </ul>
-                                        </li>
-                                        <li class='nav-item '>
-                                            <a class='nav-link' href='/cay-cong-trinh' title='Cây công trình'> Cây công trình</a>
-
-                                            <ul class='dropdown-menu'>
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-xanh-do-thi' title='Cây xanh đô thị'>Cây xanh đô thị</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-bong-mat' title='Cây bóng mát'>Cây bóng mát</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cay-la-mau' title='Cây lá màu'>Cây lá màu</a>
-                                                </li>
-
-
-
-                                                <li class='nav-item '>
-                                                    <a class='nav-link' href='/cac-loai-co-canh' title='Các loại cỏ cảnh'>Các loại cỏ cảnh</a>
-                                                </li>
-
-
-
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    @endforeach
                                 </nav>
                             </div>
                         </aside>
-                        <div class='aside-item'>
-                            <div class='heading'>
-                                <h2 class='title-head'><a href='tin-tuc' title='Xem nhiều nhất'>Xem nhiều nhất</a></h2>
-                            </div>
-                            <div class='list-blogs'>
 
-                            </div>
-                            <div class='blogs-mores text-center'><a href='tin-tuc' title='Xem thêm'>Xem thêm</a></div>
-                        </div>
                     </aside>
                 </div>
             </div>

@@ -51,8 +51,12 @@
 
                                                 </h3>
                                                 <div class="product-price">
-                                                    <span class="price item_price">{{$product->price}} VNĐ</span>
-                                                    <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                    @if($product->price_sale != 0 )
+                                                        <span class="price item_price">{{$product->price_sale}} VNĐ</span>
+                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
+                                                    @else
+                                                        <span class="price item_price">{{$product->price}} VNĐ</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -79,7 +83,7 @@
                                         <li>
                                             <button class="dropdown-btn">
                                             <i class="fa fa-caret-right"></i>  {{$category->name}}
-                                                <i class="fa fa-caret-down"></i>
+                                                <i class="fa fa-angle-down"></i>
                                             </button>
                                             <div class="dropdown-container">
                                                 @foreach($category-> categoryChilden as $categoryChilden)
@@ -89,6 +93,7 @@
                                             </div>
                                         </li>
                                         @endforeach
+
                                     </ul>
                                 </div>
                             </nav>

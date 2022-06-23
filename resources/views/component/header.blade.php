@@ -137,9 +137,11 @@
                                                 <li class="level2">
                                                     <a href="/search/label/tieu-canh-terrarium">
 
+
                                                          @foreach($category-> categoryChilden as $categoryChilden)
                                                           {{$categoryChilden->name}}
                                                           @endforeach
+
 
                                                     </a>
                                                 </li>
@@ -159,7 +161,7 @@
                                                 <img
                                                     alt="Sản phẩm"
                                                     class="img-responsive center-block"
-                                                    src="https://lh4.googleusercontent.com/-5ykt97ocR20/XPXHehJSU7I/AAAAAAAAIrc/S4Po9iWc8SAKBivPFK018Aj8lQ20WGHJgCLcBGAs/s1600/banner_menu_1.jpg"
+                                                    src={{URL::asset('template/images/menu_1.jpg')}}
                                                 />
                                             </picture>
                                         </a>
