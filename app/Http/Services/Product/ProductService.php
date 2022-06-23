@@ -7,7 +7,7 @@ use App\Models\Product;
 
 class ProductService
 {
-    const LIMIT =4;
+    const LIMIT =16;
 
     public function get($page =null){
         return Product::query()->select('id','name','price','price_sale','avatar')
