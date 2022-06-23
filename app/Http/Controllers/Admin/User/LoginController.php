@@ -14,7 +14,7 @@ class LoginController extends Controller
     public function index()
     {
        return view('admin.users.login',[
-          'title'=>'Đăng Nhập Hẹ Thống',
+          'title'=>'Đăng Nhập Hệ Thống',
        ]);
 
     }

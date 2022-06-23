@@ -82,7 +82,7 @@
                         <li class="nav-item">
                             <a href={{URL::asset('admin/products/list')}} class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Danh ách Sản Phẩm</p>
+                                <p>Danh Sách Sản Phẩm</p>
                             </a>
                         </li>
                     </ul>
