@@ -10,7 +10,7 @@
                         <ul class='breadcrumb' itemscope='' itemtype='http://schema.org/BreadcrumbList'>
                             <li class='home'>
                                 <a href='/' title='Trang chủ'>
-                                    <span>Trang chủ</span>
+                                    <span>Trang chủ > </span>
                                 </a>
                                 <span>Tất cả sản phẩm</span>
                             </li>

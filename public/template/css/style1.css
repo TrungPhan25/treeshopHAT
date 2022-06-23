@@ -7179,6 +7179,9 @@ header nav .mega-content .level1.item ul.level1 li a {
     font-weight: normal !important;
     text-transform: none !important;
     color: #333;
+    display: block;
+    padding-left: 4px;
+    line-height: 1.5;
 }
 header nav .mega-content .level1.item ul.level1 li a:hover,
 header nav .mega-content .level1.item ul.level1 li a:focus {
@@ -16161,16 +16164,17 @@ header.header nav .nav .nav-item:hover > a:before {
 }
 .details-product .details-pro .price-box .old-price {
     display: inline-block;
-    font-size: 13px;
+    font-size: 20px;
 }
 .details-product .details-pro .price-box .old-price .product-price-old {
     color: #696969;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
 }
 .details-product .details-pro .price-box .save-price {
     color: #73a91d;
     margin-left: 30px;
+    font-size: 24px;
 }
 @media (max-width: 1024px) {
     .details-product .details-pro .price-box .save-price {
@@ -19130,6 +19134,7 @@ footer.footer-other {
 * {
     box-sizing: border-box;
 }
+
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
@@ -19137,42 +19142,8 @@ footer.footer-other {
     margin: auto;
 }
 
-/* Hide the images by default */
-.mySlider {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prevv,
-.nextt {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.nextt {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 /* Caption text */
-.textt {
+.text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -19193,7 +19164,6 @@ footer.footer-other {
 
 /* The dots/bullets/indicators */
 .dot {
-    cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -19203,8 +19173,7 @@ footer.footer-other {
     transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.active {
     background-color: #717171;
 }
 
@@ -19214,14 +19183,6 @@ footer.footer-other {
     animation-duration: 1.5s;
 }
 
-@keyframes fadee {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 /* pagi */
 .pagi {

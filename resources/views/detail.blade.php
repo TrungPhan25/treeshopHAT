@@ -21,9 +21,10 @@
                                                    <ul class='breadcrumb' itemscope='' itemtype='http://schema.org/BreadcrumbList'>
                                                       <li class='home'>
                                                          <a href='/' title='Trang chủ'>
-                                                         <span>Trang chủ</span>
+                                                         <span>Trang chủ > </span>
                                                          </a>
-                                                         <span>Sản phẩm</span>
+                                                         <span>Sản phẩm ></span>
+                                                          <span> {{$product->name}}</span>
                                                       </li>
                                                    </ul>
                                                 </div>
@@ -142,11 +143,11 @@
                                                       <div class="price-box clearfix">
                                                          <div class="special-price">
                                                             <span class="price product-price item_price" style="padding-bottom: 6px">
-                                                            {{$product->price}}đ</span><span class="old-price">Giá thị trường:
-                                                            <del class="price product-price-old">650,000đ</del>
+                                                            {{$product->price_sale}}đ</span><span class="old-price">Giá cũ:
+                                                            <del class="price product-price-old">{{$product->price}}</del>
                                                             </span>
                                                             <span class="save-price">Tiết kiệm:
-                                                            <span class="price product-price-save">200,000đ
+                                                            <span class="price product-price-save">{{$product->price - $product->price_sale }}đ
                                                             </span></span
                                                                >
                                                          </div>
@@ -178,9 +179,10 @@
                                                    </div>
                                                    <div class="form-product">
                                                       <form
+                                                          class="form-inline has-validation-callback"
                                                          action="/treeshopHAT/public/add-cart"
                                                          id="add-to-cart-form"
-                                                         class="form-inline has-validation-callback"
+
                                                          method="post"
                                                          >
                                                          @if ($product->price !== NULL)

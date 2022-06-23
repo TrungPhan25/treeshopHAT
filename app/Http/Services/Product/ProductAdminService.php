@@ -48,6 +48,15 @@ class ProductAdminService
 
         return  true;
     }
+    private function isValidQuantity($request)
+    { if ( $request->input('quantity_sold') > $request->input('quantity')
+    ) {
+        Session::flash('error', 'Số lượng bán phải nhỏ hơn số lượng');
+        return false;
+    }
+
+        return  true;
+    }
 
     public function get()
     {
@@ -57,8 +66,10 @@ class ProductAdminService
     }
     public function update($request, $product)
     {
+        $isValidQuantity = $this->isValidQuantity($request);
+
         $isValidPrice = $this->isValidPrice($request);
-        if ($isValidPrice === false) return false;
+        if ($isValidPrice === false && isValidQuantity === false) return false;
 
         try {
             $product->fill($request->input());
