@@ -10,22 +10,7 @@
                     <a class="gp" href="#" target="_blank" title="Google Plus"> </a>
                     <a class="pin" href="#" target="_blank" title="Pinterest"> </a>
                 </div>
-                <!-- <div class="col-md-6 col-xs-12 right">
-                    <ul class="header links">
-                        <li>
-                            <a href="/account/login" title="Đăng nhập">
-                                <i aria-hidden="true" class="fa fa-sign-in"> </i>
-                                Đăng nhập
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/account/register" title="Đăng ký">
-                                <i aria-hidden="true" class="fa fa-user-plus"> </i>
-                                Đăng ký
-                            </a>
-                        </li>
-                    </ul>
-                </div> -->
+            
             </div>
             <div class="header-main clearfix" id="navbar1">
                 <div class="col-lg-3 col-md-3 col-100-h">
@@ -56,12 +41,11 @@
                         </div>
                     </div>
                     <div class="mobile-cart visible-sm visible-xs">
-                        <a href="/p/cart.html" title="Giỏ hàng">
-                            <i class="fa fa-cart-arrow-down"> </i>
-                            <div class="cart-right">
-                                <span class="count_item_pr simpleCart_quantity">1</span>
-                            </div>
-                        </a>
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+                         data-notify="{{    !is_null(\Session::get('carts')) ? count(\Session::get('carts')) : 0  }}">
+                        <i class="zmdi zmdi-shopping-cart"></i>
+                    </div>
+
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-5">
@@ -91,95 +75,12 @@
                 <div
                     class="col-lg-4 col-md-4 text-right hidden-sm hidden-xs clearfix"
                 >
+                
                     <div class="items-cart-inner clearfix mini-cart">
-                        <a class="showcart" href="/p/cart.html" title="Giỏ hàng">
-                            <i class="fa fa-cart-arrow-down"> </i>
-                            <div
-                                class="basket-item-count count_item_pr simpleCart_quantity"
-                            >
-                                1
-                            </div>
-                        </a>
-
-                        <!-- -mini cart -->
-                        <div class="top-cart-content">
-
-                            <ul class="mini-products-list count_li" id="cart-sidebar">
-                                <ul class="list-item-cart">
-                                    <li class="list-item">
-                                        <div class="simpleCart_items">
-                                            <div class="cartHeaders">
-                                                <div class="itemthumb">thumb</div>
-                                                <div class="itemName">Name</div>
-                                                <div class="itemsize">size</div>
-                                                <div class="itemcolor">color</div>
-                                                <div class="itemPrice">Price</div>
-                                                <div class="itemdecrement">Decrement</div>
-                                                <div class="itemQuantity">Quantity</div>
-                                                <div class="itemincrement">Increment</div>
-                                                <div class="itemtotal">Total</div>
-                                                <div class="itemRemove">Remove</div>
-                                            </div>
-                                            <div class="itemContainer group">
-                                                <div class="itemthumb">
-                                                    <img
-                                                        src="https://lh4.googleusercontent.com/-AMs_8sTGWWI/XsHbRC9nc2I/AAAAAAAAMAk/yKZ3h0rDOBEFI9iP0lTtZcfrD1ITyG2cQCLcBGAsYHQ/s1600/cay-ke-nhat-2-1542357289.jpg"
-                                                    />
-                                                </div>
-                                                <div class="itemName">Mã: HT03 - Cây Cọ Nhật A</div>
-                                                <div class="itemsize"></div>
-                                                <div class="itemcolor"></div>
-                                                <div class="itemPrice">450,000&nbsp;₫</div>
-                                                <div class="itemdecrement">
-                                                    <a
-                                                        href="javascript:;"
-                                                        onclick="simpleCart.items['c19'].decrement();"
-                                                    ><i class="fa fa-minus"></i
-                                                        ></a>
-                                                </div>
-                                                <div class="itemQuantity">1</div>
-                                                <div class="itemincrement">
-                                                    <a
-                                                        href="javascript:;"
-                                                        onclick="simpleCart.items['c19'].increment();"
-                                                    ><i class="fa fa-plus"></i
-                                                        ></a>
-                                                </div>
-                                                <div class="itemtotal">450,000&nbsp;₫</div>
-                                                <div class="itemRemove">
-                                                    <a
-                                                        href="javascript:;"
-                                                        onclick="simpleCart.items['c19'].remove();"
-                                                    ><i class="fa fa-close"></i
-                                                        ></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div>
-                                    <div class="top-subtotal">
-                                        Tổng cộng:
-                                        <span class="price simpleCart_total">450,000&nbsp;₫</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="actions clearfix">
-                                        <a
-                                            class="btn btn-gray btn-checkout"
-                                            href="/p/checkout.html"
-                                            title="Thanh toán"
-                                        ><span>Thanh toán</span></a
-                                        ><a
-                                            class="view-cart btn btn-white margin-left-5"
-                                            href="/p/cart.html"
-                                            title="Giỏ hàng"
-                                        ><span>Giỏ hàng</span></a
-                                        >
-                                    </div>
-                                </div>
-                            </ul>
-                        </div>
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+                         data-notify="{{    !is_null(\Session::get('carts')) ? count(\Session::get('carts')) : 0  }}">
+                        <i class="zmdi zmdi-shopping-cart"></i>
+                    </div>                                                                   
                     </div>
                     <div class="customer-support-text clearfix">
                         <img
