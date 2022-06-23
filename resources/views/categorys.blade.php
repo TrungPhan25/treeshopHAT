@@ -61,25 +61,11 @@
                           @endforeach
 
                             </div>
+                        </section>
+                        {{$products->links('paging')}}
+                    </div>
 
-                            <div class="card-footer clearfix">
-                                {{ $products->links('pagning')}}
-                            </div>
-{{--                        </section>--}}
-{{--                        <div class="page">--}}
-{{--                            <ul class="pagi">--}}
-
-{{--                                <li class="pagi-item">1</li>--}}
-{{--                                <li class="pagi-item is-active">2</li>--}}
-{{--                                <li class="pagi-item">3</li>--}}
-{{--                                <li class="pagi-item">4</li>--}}
-{{--                                <li class="pagi-item">5</li>--}}
-
-{{--                            </ul>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                </section>--}}
+                </section>
                 <aside class='ant-sidebar sidebar  left-content col-md-3 col-md-pull-9'>
                     <aside class='aside-item collection-category'>
                         <div class='aside-title'>
@@ -122,5 +108,4 @@
         </div>
     </div>
 </div>
-
 @endsection
