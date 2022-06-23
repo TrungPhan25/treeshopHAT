@@ -7,7 +7,7 @@
 
         <div class="container">
             <div class="row cart_titel">
-                <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+                <div class="col-lg-8 col-xl-7 m-lr-auto m-b-50">
                     <div class="m-l-25 m-r--38 m-lr-0-xl">
                         <div class="wrap-table-shopping-cart">
 
@@ -77,52 +77,54 @@
                     </div>
                 </div>
 
-                <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
+                <div class="col-sm-10 col-lg-4 col-xl-5 m-lr-auto m-b-50">
                     <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-                        <h4 class="mtext-109 cl2 p-b-30">
-                            Cart Totals
+                        <h4 class="titel-car text-cent cl2 p-b-30">
+                           HÓA ĐƠN
                         </h4>
 
-                        <div class="flex-w flex-t p-t-27 p-b-33">
-                            <div class="size-208">
-                                    <span class="mtext-101 cl2">
-                                        Total:
+                        <div class=" ">
+                            <div class="">
+                                    <span class="titel-car text-cent cl2">
+                                        Tổng tiền: {{ number_format($total, 0, '', '.') }}
                                     </span>
                             </div>
 
-                            <div class="size-209 p-t-1">
-                                    <span class="mtext-110 cl2">
-                                        {{ number_format($total, 0, '', '.') }}
-                                    </span>
-                            </div>
+
                         </div>
 
                         <div class="flex-w flex-t bor12 p-t-15 p-b-30">
 
-                            <div class="size-100 p-r-18 p-r-0-sm w-full-ssm">
+                            <div class="size-100  p-r-0-sm w-full-ssm">
 
                                 <div class="p-t-15">
-									<span class="stext-112 cl8">
+									<span class=" cl8 titel-car-a">
                                             Thông Tin Khách Hàng
                                         </span>
 
-                                    <div class="bor8 bg0 m-b-12">
+                                    <div class="bg0 m-b-12 titel-car-a">
                                         <input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên khách Hàng" required>
                                     </div>
-
-                                    <div class="bor8 bg0 m-b-12">
+                                    <span class=" cl8 titel-car-a">
+                                            Số điện thoại
+                                        </span>
+                                    <div class=" bg0 m-b-12 titel-car-a">
                                         <input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="Số Điện Thoại" required>
                                     </div>
-
-                                    <div class="bor8 bg0 m-b-12">
+                                    <span class=" cl8 titel-car-a">
+                                          Địa chỉ
+                                        </span>
+                                    <div class=" bg0 m-b-12 titel-car-a">
                                         <input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="address" placeholder="Địa Chỉ Giao Hàng">
                                     </div>
-
-                                    <div class="bor8 bg0 m-b-12">
+                                    <span class=" cl8 titel-car-a">
+                                         Mail
+                                        </span>
+                                    <div class=" bg0 m-b-12 titel-car-a">
                                         <input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="email" placeholder="Email Liên Hệ">
                                     </div>
 
-                                    <div class="bor8 bg0 m-b-12">
+                                    <div class="bg0 m-b-12 titel-car-a">
                                         <textarea class="cl8 plh3 size-111 p-lr-15" name="content"></textarea>
                                     </div>
 
