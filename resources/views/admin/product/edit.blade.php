@@ -64,7 +64,7 @@
 
             <div class="form-group">
                 <label>Mô Tả Chi Tiết</label>
-                <textarea name="detail" id="content" class="form-control">{{ $product->content  }}</textarea>
+                <textarea name="detail" id="content" class="form-control">{{ $product->detail  }}</textarea>
             </div>
 
             <div class="form-group">
