@@ -8,8 +8,10 @@ use App\Http\Services\Category\CategoryService;
 class CategoryController extends Controller
 {
     protected $categoryService;
+
     public function __construct(CategoryService $categoryService){
         $this->categoryService=$categoryService;
+
     }
 
     public function index(Request $request, $id,$slug=''){
@@ -18,6 +20,7 @@ class CategoryController extends Controller
             return view('category',[
                 'title'=>$category->name,
                 'products'=>$products,
+                'categories' =>  $this->categoryService->show(),
                 'category'=>$category
             ]);
     }

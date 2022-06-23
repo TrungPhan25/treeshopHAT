@@ -103,7 +103,67 @@
                     </aside>
 
 
+
+                </aside>
+                <div class="left-content col-md-3 col-md-pull-9">
+                    <div class="section" id="cot-trai" name="Sidebar Phải">
+                        <div class="widget HTML" data-version="1" id="HTML9">
+                            <div class="widget-content">
+                                <div class="module_service_details clearfix">
+                                    <div class="item_service clearfix">
+                                        <a href="#" title="Miễn phí vận chuyển">
+                                            <img
+                                                alt="Miễn phí vận chuyển"
+                                                src="https://lh4.googleusercontent.com/-r2RhL8IXDBg/XPXFTenKnlI/AAAAAAAAIqQ/ryIXUnYf5RgLoMgMn4Pyd5j_DTLgDl-fACLcBGAs/s1600/policy_images_1.png"
+                                            />
+                                            <div class="service-content">
+                                                <p>Miễn phí vận chuyển</p>
+                                                <span>Cho các đơn hàng &gt; 5tr</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item_service clearfix">
+                                        <a href="#" title="Hỗ trợ 24/7">
+                                            <img
+                                                alt="Hỗ trợ 24/7"
+                                                src="https://lh4.googleusercontent.com/-QcvG46zrqc4/XPXFtXQeqvI/AAAAAAAAIqk/kbki5uj9KGQhoHFRwnl6bGP-Cn610ZVWACLcBGAs/s1600/policy_images_4.png"
+                                            />
+                                            <div class="service-content">
+                                                <p>Hỗ trợ 24/7</p>
+                                                <span>Liên hệ hỗ trợ 24h/ngày</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item_service clearfix">
+                                        <a href="#" title="Hoàn tiền 100%">
+                                            <img
+                                                alt="Hoàn tiền 100%"
+                                                src="https://lh4.googleusercontent.com/-XRqhM2tC-4Q/XPXFa3Bd6zI/AAAAAAAAIqY/Z30_GU9UmJEH4WFYTCkhXiCDtvZzJhIUQCLcBGAs/s1600/policy_images_2.png"
+                                            />
+                                            <div class="service-content">
+                                                <p>Hoàn tiền 100%</p>
+                                                <span>Nếu sản phẩm bị lỗi, hư hỏng</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item_service clearfix">
+                                        <a href="#" title="Thanh toán">
+                                            <img
+                                                alt="Thanh toán"
+                                                src="https://lh4.googleusercontent.com/-RvQwJPz0knE/XPXFmbbfOiI/AAAAAAAAIqc/qRKoO6XIwuYHvM6LDWrtr2E_I7h4MB-9ACLcBGAs/s1600/policy_images_3.png"
+                                            />
+                                            <div class="service-content">
+                                                <p>Thanh toán</p>
+                                                <span>Được bảo mật 100%</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
             </div>
+
         </div>
     </div>
 </div>

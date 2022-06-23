@@ -4048,8 +4048,8 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #49b14d;
+    border-color: #49b14d;
 }
 .pagination > .disabled > a,
 .pagination > .disabled > a:focus,
@@ -19249,3 +19249,10 @@ footer.footer-other {
 .icon-header-item {
     color: white;
 }
+
+.textt {
+
+     position: unset !important;
+
+}
+

@@ -19,7 +19,7 @@
 
                                                 @foreach($sliders as $slider)
                                                     <div class="mySlides fadee">
-                                                        <div class="numbertext">2 / 3</div>
+
                                                         <img src="{{ $slider->avatar }}" style="width:100%">
 
                                                     </div>
@@ -232,7 +232,7 @@
                                 </div>
                                 <div class="col-md-7 no-padding col-phai">
                                     <div class="about-image">
-                                        <a href="/search/label/san-pham" title="Ant Green">
+                                        <a href="#" title="Ant Green">
                                             <img
                                                 alt="Ant Green"
                                                 class="img-responsive center-block"
