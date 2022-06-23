@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Services\Slider\SliderService;
 use App\Http\Services\Category\CategoryService;
 use App\Http\Services\Product\ProductService;
+use App\Models\categories;
 use Illuminate\Http\Request;
+use App\Models\Product;
+
 
 class MainController extends Controller
 {
@@ -28,6 +31,17 @@ class MainController extends Controller
             'products'=>$this->product->get(),
             'productsID' => $this->product->getID()
         ]);
+    }
+    public function search(Request $request){
+        $result = $request->result;
+        $keyword = $result;
+        $categories = categories::where('list_id',0)->get();
+        $products = Product::latest()->take(4)->get();
+        $result = str_replace('','%',$result);
+        $items = Product::where('name','like','%'.$result.'%')->get();
+        return view('search',[
+            'title'=>'Sản phẩm',
+        ],compact('products','categories','items','keyword' ));
     }
     public function Categorys()
     {

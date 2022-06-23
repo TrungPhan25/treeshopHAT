@@ -10,7 +10,7 @@
                     <a class="gp" href="#" target="_blank" title="Google Plus"> </a>
                     <a class="pin" href="#" target="_blank" title="Pinterest"> </a>
                 </div>
-            
+
             </div>
             <div class="header-main clearfix" id="navbar1">
                 <div class="col-lg-3 col-md-3 col-100-h">
@@ -75,12 +75,12 @@
                 <div
                     class="col-lg-4 col-md-4 text-right hidden-sm hidden-xs clearfix"
                 >
-                
+
                     <div class="items-cart-inner clearfix mini-cart">
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
                          data-notify="{{    !is_null(\Session::get('carts')) ? count(\Session::get('carts')) : 0  }}">
                         <i class="zmdi zmdi-shopping-cart"></i>
-                    </div>                                                                   
+                    </div>
                     </div>
                     <div class="customer-support-text clearfix">
                         <img
