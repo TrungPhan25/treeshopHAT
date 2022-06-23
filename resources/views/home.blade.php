@@ -16,30 +16,28 @@
                                     <div class='margin-top-15 top-sliders col-md-12'>
                                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                                                                         <!-- Slideshow container -->
-                                                        <div class="slideshow-container">
 
-                                            <!-- Full-width images with number and caption text -->
-                                            @foreach($sliders as $slider)
-                                            <div class="mySlider fadee">
 
-                                                <img src="{{ $slider->avatar }}" style="width:100%">
+
+
+                                            <div class="slideshow-container">
+
+                                                @foreach($sliders as $slider)
+                                                    <div class="mySlides fadee">
+                                                        <div class="numbertext">2 / 3</div>
+                                                        <img src="{{ $slider->avatar }}" style="width:100%">
+                                                        <div class="text">Caption Two</div>
+                                                    </div>
+                                                @endforeach
 
                                             </div>
-                                            @endforeach
+                                            <br>
 
-
-<!-- Next and previous buttons -->
-<a class="prevv" onclick="plusSlides(-1)">&#10094;</a>
-<a class="nextt" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
-</div>
+                                            <div style="text-align:center">
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
 
                                     </div>
                                     </div>
