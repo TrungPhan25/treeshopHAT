@@ -45,13 +45,14 @@ class MainController extends Controller
             'items'=>$items->appends($request->except('page')),
         ],compact('products','categories','keyword' ));
     }
-    public function Categorys()
+    public function Categorys(Request $request)
     {
+        $products = $this->category->getProductall($request);
         return view('categorys', [
             'title' => 'Tất cả sản phẩm',
             'sliders' => $this->slider->show(),
             'categories' => $this->category->show(),
-            'products' => $this->product->get(),
+            'products' =>$products,
             'productsID' => $this->product->getID(),
         ]);
     }

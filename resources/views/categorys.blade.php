@@ -15,10 +15,13 @@
                                 <span>Tất cả sản phẩm</span>
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </div>
+
         </section>
+
         <div class='container'>
             <div class='row'>
                 <section class='main_container collection col-md-9 col-md-push-3'>
@@ -28,7 +31,38 @@
                                 <h1 class='title-head'>Tất cả sản phẩm</h1>
                             </div>
 
+                            <div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
+                                <div class="filter-col1 p-r-15 p-b-27">
+                                    <div class="mtext-102 cl2 p-b-15">
+                                        Sort By
+                                    </div>
+
+                                    <ul>
+                                        <li class="p-b-6">
+                                            <a href="{{ request()->url() }}" class="filter-link stext-106 trans-04">
+                                                Default
+                                            </a>
+                                        </li>
+
+                                        <li class="p-b-6">
+                                            <a href="{{ request()->fullUrlWithQuery(['price' => 'asc']) }}" class="filter-link stext-106 trans-04">
+                                                Price: Low to High
+                                            </a>
+                                        </li>
+
+                                        <li class="p-b-6">
+                                            <a href="{{ request()->fullUrlWithQuery(['price' => 'desc']) }}" class="filter-link stext-106 trans-04">
+                                                Price: High to Low
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
                         </div>
+
                         <section class='products-view products-view-grid list-blogs blog-main margin-top-30'>
                             <div class='row'>
 
