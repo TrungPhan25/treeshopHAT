@@ -12,6 +12,7 @@ use App\Models\Product;
 
 class MainController extends Controller
 {
+    const LIMIT =4;
     protected $slider;
     protected $category;
     protected $product;
@@ -38,10 +39,11 @@ class MainController extends Controller
         $categories = categories::where('list_id',0)->get();
         $products = Product::latest()->take(4)->get();
         $result = str_replace('','%',$result);
-        $items = Product::where('name','like','%'.$result.'%')->get();
+        $items = Product::query()->where('name','like','%'.$result.'%')->paginate(self::LIMIT);
         return view('search',[
             'title'=>'Sản phẩm',
-        ],compact('products','categories','items','keyword' ));
+            'items'=>$items->appends($request->except('page')),
+        ],compact('products','categories','keyword' ));
     }
     public function Categorys()
     {

@@ -38,7 +38,7 @@
                                             <div class = "simpleCart_shelfItem">
                                                 <div class="ant-single-product">
                                                     <div class="ant-single-product-image">
-                                                        <a href="/treeshopHAT/public/san-pham/{{ $item->id }}-{{ Str::slug($item->name, '-') }}.html"><img src="product_01.jpg" alt="'+r+'" class="img-responsive center-block item_thumb" /></a>
+                                                        <a href="/treeshopHAT/public/san-pham/{{ $item->id }}-{{ Str::slug($item->name, '-') }}.html"><img src="{{ $item->avatar }}" alt="'+r+'" class="img-responsive center-block item_thumb" /></a>
                                                         <span class="discount-label discount-label--green">-6%</span>
                                                         <form action="javascript:void(0);" class="hover-icons hidden-sm hidden-xs variants form-nut-grid form-ajaxtocart">
                                                             <a class="button ajax_addtocart add_to_cart item_add" href="javascript:void(0);" title="Mua ngay"></a>
@@ -59,20 +59,9 @@
                                             </div>
                                         </div>
                                     @endforeach
-
                                 </div>
                             </section>
-                            <div class="page">
-                                <ul class="pagi">
-
-                                    <li class="pagi-item">1</li>
-                                    <li class="pagi-item is-active">2</li>
-                                    <li class="pagi-item">3</li>
-                                    <li class="pagi-item">4</li>
-                                    <li class="pagi-item">5</li>
-
-                                </ul>
-                            </div>
+                            {{$items->links('paging')}}
                         </div>
 
                     </section>
