@@ -82,16 +82,16 @@
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
                     </div>
-                    <div class="customer-support-text clearfix">
-                        <img
-                            alt="Hotline"
-                            src={{URL::asset('template/images/hotline_image.png')}}
-                        />
-                        <div class="text">
-                            <span> Hotline </span>
-                            <a href="tel:0123456789"> 0123 456 789 </a>
-                        </div>
-                    </div>
+{{--                    <div class="customer-support-text clearfix">--}}
+{{--                        <img--}}
+{{--                            alt="Hotline"--}}
+{{--                            src={{URL::asset('template/images/hotline_image.png')}}--}}
+{{--                        />--}}
+{{--                        <div class="text">--}}
+{{--                            <span> Hotline </span>--}}
+{{--                            <a href="tel:0123456789"> 0123 456 789 </a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>

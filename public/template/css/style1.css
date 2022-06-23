@@ -7179,6 +7179,9 @@ header nav .mega-content .level1.item ul.level1 li a {
     font-weight: normal !important;
     text-transform: none !important;
     color: #333;
+    display: block;
+    padding-left: 4px;
+    line-height: 1.5;
 }
 header nav .mega-content .level1.item ul.level1 li a:hover,
 header nav .mega-content .level1.item ul.level1 li a:focus {
@@ -16161,16 +16164,17 @@ header.header nav .nav .nav-item:hover > a:before {
 }
 .details-product .details-pro .price-box .old-price {
     display: inline-block;
-    font-size: 13px;
+    font-size: 20px;
 }
 .details-product .details-pro .price-box .old-price .product-price-old {
     color: #696969;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
 }
 .details-product .details-pro .price-box .save-price {
     color: #73a91d;
     margin-left: 30px;
+    font-size: 24px;
 }
 @media (max-width: 1024px) {
     .details-product .details-pro .price-box .save-price {

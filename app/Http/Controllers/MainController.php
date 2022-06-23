@@ -29,7 +29,7 @@ class MainController extends Controller
             'title'=>'Shop bán hoa HAT',
             'sliders'=>$this->slider->show(),
             'categories'=>$this->category->show(),
-            'products'=>$this->product->get(),
+            'products'=>$this->product->geteight(),
             'productsID' => $this->product->getID()
         ]);
     }

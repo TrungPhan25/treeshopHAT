@@ -19,6 +19,7 @@ class CategoryService
     public function show(){
         return categories::select('name','id','sub')
             ->where('list_id',0)
+
             -> orderbyDesc('id')->get();
 
     }

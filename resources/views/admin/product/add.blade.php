@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="menu">Số Lượng Còn</label>
+                        <label for="menu">Số Lượng</label>
                         <input type="number" name="quantity" value="{{ old('quantity') }}"  class="form-control" >
                     </div>
                 </div>
