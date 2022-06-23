@@ -7,16 +7,15 @@ use App\Models\Product;
 
 class ProductService
 {
-    const LIMIT =16;
+    const LIMIT =4;
 
     public function get($page =null){
-        return Product::select('id','name','price','price_sale','avatar')
+        return Product::query()->select('id','name','price','price_sale','avatar')
             ->orderByDesc('id')
             ->when ($page != null, function ($query) use ($page){
                 $query->offset($page * self::LIMIT);
             })
-            ->limit(self::LIMIT)
-            ->get();
+            ->paginate(self::LIMIT);
     }
     public function getID($page =null){
         return Product::select('id','name','price','price_sale','avatar','category_id')
