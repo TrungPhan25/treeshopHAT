@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->string('avatar');
             $table->string('images')->nullable();
             $table->string('detail')->nullable();
-
             $table->integer('quantity')->default(0);
             $table->integer('quantity_sold')->default(0);
             $table->bigInteger('price')->default(0);
