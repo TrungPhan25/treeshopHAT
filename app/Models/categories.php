@@ -21,7 +21,10 @@ class categories extends Model
     public function products(){
         return $this->hasMany(Product::class,'category_id','id');
     }
+
     public function categoryChilden(){
         return $this->hasMany(categories::class,'list_id');
     }
+
+
 }
