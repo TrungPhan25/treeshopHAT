@@ -65,7 +65,11 @@
                                                     </div>
                                                     <input class="input_w cl3 txt-center num-product bx-10"
                                                            type="number" name="num_product[{{$product->id }}]"
-                                                           value="{{$carts[$product->id]}}">
+                                                           @if($carts[$product->id] >=0)
+                                                           value="{{$carts[$product->id]}}"
+                                                    @elseif($carts[$product->id] < 0)
+                                                        value="1"
+                                                    @endif
                                                     <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                                         <i class="fs-16 zmdi zmdi-plus"></i>
                                                     </div>
@@ -117,14 +121,14 @@
 
                                         <div class="bg0 m-b-12 titel-car-a">
                                             <input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name"
-                                                   >
+                                            >
                                         </div>
                                         <span class=" cl8 titel-car-a">
                                             Số điện thoại:
                                         </span>
                                         <div class=" bg0 m-b-12 titel-car-a">
                                             <input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone"
-                                                  >
+                                            >
                                         </div>
                                         <span class=" cl8 titel-car-a">
                                           Địa chỉ:

@@ -66,10 +66,7 @@ Route::post('/services/load-product',[App\Http\Controllers\MainController::class
 Route::get('/profile',[App\Http\Controllers\MainController::class, 'profile']);
 Route::get('/danh-muc/{id}-{slug}.html', [\App\Http\Controllers\CategoryController::class, 'index']);
 Route::get('/san-pham/{id}-{slug}.html', [\App\Http\Controllers\ProductController::class, 'index']);
-Route::get('/categorys', [
-    \App\Http\Controllers\MainController::class,
-    'Categorys',
-])->name('Categorys');
+Route::get('/categorys', [\App\Http\Controllers\MainController::class, 'Categorys',])->name('Categorys');
 #CART
 Route::post('/add-cart', [ CartController::class,'index']);
 Route::get('/carts', [ CartController::class,'show']);
