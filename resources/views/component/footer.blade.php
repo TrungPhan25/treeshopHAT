@@ -1,6 +1,6 @@
 <footer class='footer-container'>
     <div class='footer-top'>
-        <div class='container'>
+        <div class=''>
             <div class='row'>
                 <div class='col-md-4 col-sm-4 col-xs-12'>
                     <b:section id='gt' maxwidgets='1' name='Giới thiệu' showaddelement='yes'>

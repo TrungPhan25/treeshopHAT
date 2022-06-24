@@ -17,7 +17,7 @@
 
             <div class="form-group">
                 <label>Danh Mục</label>
-                <select class="form-control" name="parent_id">
+                <select class="form-control" name="list_id">
                     <option value="0" {{ $category->list_id == 0 ? 'selected' : '' }}> Danh Mục Cha </option>
                     @foreach($categories as $categoryParent)
                         <option value="{{ $categoryParent->id }}"

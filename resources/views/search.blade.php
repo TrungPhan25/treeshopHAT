@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-    <div class='container'>
+    <div class=''>
         <div class="row">
             <section class='bread-crumb margin-bottom-30'>
                 <div class='container'>
@@ -82,16 +82,15 @@
                                     <div class="sidenav">
                                         <ul>
                                             @foreach($categories as $category)
-                                                <li>
-                                                    <button class="dropdown-btn">
-                                                        <i class="fa fa-caret-right"></i>  {{$category->name}}
-                                                        <i class="fa fa-angle-down"></i>
+                                                <li class="lis-ca">
+                                                    <a class="link-ca" href="/treeshopHAT/public/danh-muc/{{ $category->id }}-{{ Str::slug($category->name, '-') }}.html"> <i class="fa fa-caret-right icon-ca"></i> {{$category->name}}</a>
+                                                    <button class="dropdown-btn btn-ca ca-letf fa fa-angle-down"><i class=""></i>
                                                     </button>
                                                     <div class="dropdown-container">
                                                         @foreach($category-> categoryChilden as $categoryChilden)
-                                                            <a href="/search/label/{{$categoryChilden->name}}">
-                                                                {{$categoryChilden->name}}
-                                                                @endforeach</a>
+                                                            <a href="/treeshopHAT/public/danh-muc/{{ $categoryChilden->id }}-{{ Str::slug($categoryChilden->name, '-') }}.html">
+                                                                {{$categoryChilden->name}}</a>
+                                                        @endforeach
                                                     </div>
                                                 </li>
                                             @endforeach

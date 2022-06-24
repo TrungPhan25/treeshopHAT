@@ -63,6 +63,7 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'index']);
 Route::get('/search', [App\Http\Controllers\MainController::class, 'search']);
 
 Route::post('/services/load-product',[App\Http\Controllers\MainController::class, 'loadProduct']);
+Route::get('/profile',[App\Http\Controllers\MainController::class, 'profile']);
 Route::get('/danh-muc/{id}-{slug}.html', [\App\Http\Controllers\CategoryController::class, 'index']);
 Route::get('/san-pham/{id}-{slug}.html', [\App\Http\Controllers\ProductController::class, 'index']);
 Route::get('/categorys', [

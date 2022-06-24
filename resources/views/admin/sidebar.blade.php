@@ -76,13 +76,13 @@
                         <li class="nav-item">
                             <a href={{URL::asset('admin/products/add')}} class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm Sản Phẩm</p>
+                                <p>Thêm sản phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href={{URL::asset('admin/products/list')}} class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Danh Sách Sản Phẩm</p>
+                                <p>Danh sách sản phẩm</p>
                             </a>
                         </li>
                     </ul>
@@ -115,7 +115,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-cart-plus"></i>
-                        <p> Giỏ Hàng
+                        <p> Đơn hàng
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -123,7 +123,7 @@
                         <li class="nav-item">
                             <a href={{URL::asset('admin/customers')}} class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Danh Sách Đơn Hàng</p>
+                                <p>Danh sách đơn hàng</p>
                             </a>
                         </li>
 

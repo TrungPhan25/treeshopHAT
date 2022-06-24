@@ -111,7 +111,7 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/p/gioi-thieu_3.html"
+                                    href="/treeshopHAT/public/profile"
                                     title="Giới thiệu"
                                 >
                                     Giới thiệu
@@ -132,16 +132,16 @@
                                             </a>
                                             <ul class="level1">
                                                 <li class="level2">
-                                                    <a href="/search/label/tieu-canh-terrarium">
+
 
 
                                                          @foreach($category-> categoryChilden as $categoryChilden)
 
-                                                             <a href="/treeshopHAT/public/danh-muc/{{ $categoryChilden->id }}-{{ Str::slug($categoryChilden->name, '-') }}.html">{{$categoryChilden->name}}</a>
+                                                             <a href="/treeshopHAT/public/danh-muc/{{ $categoryChilden->id }}-{{ Str::slug($categoryChilden->name, '-') }}.html">{{$categoryChilden->name}}"</a>
                                                           @endforeach
 
 
-                                                    </a>
+
                                                 </li>
                                             </ul>
                                         </li>
@@ -165,107 +165,6 @@
                                         </a>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
-                                    href="/search/label/tin-tuc"
-                                    title="Tin tức"
-                                >
-                                    Tin tức
-                                    <i class="fa fa-angle-right" data-toggle="dropdown"> </i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item-lv2">
-                                        <a
-                                            class="nav-link"
-                                            href="/search/label/thiet-ke-san-vuon"
-                                            title="Thiết kế sân vườn"
-                                        >
-                                            Thiết kế sân vườn
-                                        </a>
-                                    </li>
-                                    <li class="nav-item-lv2">
-                                        <a
-                                            class="nav-link"
-                                            href="/search/label/thiet-ke-canh-quan-do-thi"
-                                            title="Thiết Kế Cảnh Quan Đô Thị"
-                                        >
-                                            Thiết Kế Cảnh Quan Đô Thị
-                                        </a>
-                                    </li>
-                                    <li class="dropdown-submenu nav-item-lv2">
-                                        <a
-                                            class="nav-link"
-                                            href="/search/label/dich-vu-khac"
-                                            title="Dịch vụ khác"
-                                        >
-                                            Dịch vụ khác
-                                            <i class="fa fa-angle-right"> </i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item-lv3">
-                                                <a
-                                                    class="nav-link"
-                                                    href="/search/label/bao-duong-cay-xanh"
-                                                    title="Bảo dưỡng cây xanh"
-                                                >
-                                                    Bảo dưỡng cây xanh
-                                                </a>
-                                            </li>
-                                            <li class="nav-item-lv3">
-                                                <a
-                                                    class="nav-link"
-                                                    href="/search/label/cho-thue-cay-canh"
-                                                    title="Cho thuê cây cảnh"
-                                                >
-                                                    Cho thuê cây cảnh
-                                                </a>
-                                            </li>
-                                            <li class="nav-item-lv3">
-                                                <a
-                                                    class="nav-link"
-                                                    href="/search/label/thi-cong-san-vuon"
-                                                    title="Thi công sân vườn"
-                                                >
-                                                    Thi công sân vườn
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item-lv2">
-                                        <a
-                                            class="nav-link"
-                                            href="/search/label/thiet-ke-san-vuon-biet-thu"
-                                            title="Thiết Kế Sân Vườn Biệt Thự"
-                                        >
-                                            Thiết Kế Sân Vườn Biệt Thự
-                                        </a>
-                                    </li>
-                                    <li class="nav-item-lv2">
-                                        <a
-                                            class="nav-link"
-                                            href="/search/label/thiet-ke-canh-quan-resort"
-                                            title="Thiết Kế Cảnh Quan Resort"
-                                        >
-                                            Thiết Kế Cảnh Quan Resort
-                                        </a>
-                                    </li>
-                                    <li class="nav-item-lv2">
-                                        <a
-                                            class="nav-link"
-                                            href="/search/label/thiet-ke-quan-cafe-san-vuon"
-                                            title="Thiết Kế Quán Cafe Sân Vườn"
-                                        >
-                                            Thiết Kế Quán Cafe Sân Vườn
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/p/lien-he.html" title="Liên hệ">
-                                    Liên hệ
-                                </a>
                             </li>
                         </ul>
                     </div>

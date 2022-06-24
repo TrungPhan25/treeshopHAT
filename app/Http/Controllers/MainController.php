@@ -68,5 +68,13 @@ class MainController extends Controller
 
         return response()->json(['html' => '' ]);
     }
-
+    public function profile(){
+        return view('profile',[
+            'title'=>'Shop bán cây cảnh',
+            'sliders'=>$this->slider->show(),
+            'categories'=>$this->category->show(),
+            'products'=>$this->product->geteight(),
+            'productsID' => $this->product->getID()
+        ]);
+    }
 }
