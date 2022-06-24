@@ -41,7 +41,14 @@
         });
     });
 </script>
-
+<script>
+    $(window).on('load', function(event) {
+        $('body').removeClass('spinner');
+        $('.spinner').delay(10).fadeOut('fast');
+    });
+</script>
+<script src={{URL::asset('template/vendor/sweetalert/loading.js')}}
+></script>
 <!--===============================================================================================-->
 <script src={{URL::asset('template/vendor/isotope/isotope.pkgd.min.js')}}></script>
 <!--===============================================================================================-->

@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-<div class='container'>
+<div class=''>
     <div class="row">
         <section class='bread-crumb margin-bottom-30'>
             <div class='container'>
@@ -27,38 +27,47 @@
                 <section class='main_container collection col-md-9 col-md-push-3'>
                     <div class='category-products products category-products-grids list-blog-page'>
                         <div if cond='data:blog.searchLabel == &quot;san-pham&quot;'>
-                            <div class='box-heading'>
+                            <div class='box-heading flex-sb'>
                                 <h1 class='title-head'>Tất cả sản phẩm</h1>
-                            </div>
-
-                            <div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
-                                <div class="filter-col1 p-r-15 p-b-27">
-                                    <div class="mtext-102 cl2 p-b-15">
-                                        Sort By
+                                <div class=" ">
+                                    <div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
+                                        <i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
+                                        <i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
+                                       Xắp Sếp
                                     </div>
 
-                                    <ul>
-                                        <li class="p-b-6">
-                                            <a href="{{ request()->url() }}" class="filter-link stext-106 trans-04">
-                                                Default
-                                            </a>
-                                        </li>
 
-                                        <li class="p-b-6">
-                                            <a href="{{ request()->fullUrlWithQuery(['price' => 'asc']) }}" class="filter-link stext-106 trans-04">
-                                                Price: Low to High
-                                            </a>
-                                        </li>
-
-                                        <li class="p-b-6">
-                                            <a href="{{ request()->fullUrlWithQuery(['price' => 'desc']) }}" class="filter-link stext-106 trans-04">
-                                                Price: High to Low
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
+                            </div>
+
+                            <!-- Filter -->
+                            <div class="dis-none panel-filter w-full p-t-10">
+                                <div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
+                                    <div class="filter-col1 p-r-15 p-b-27">
 
 
+                                        <ul>
+                                            <li class="p-b-6">
+                                                <a href="{{ request()->url() }}" class="filter-link stext-106 trans-04">
+                                                    Mặc định
+                                                </a>
+                                            </li>
+
+                                            <li class="p-b-6">
+                                                <a href="{{ request()->fullUrlWithQuery(['price' => 'asc']) }}" class="filter-link stext-106 trans-04">
+                                                    Giá tăng dần
+                                                </a>
+                                            </li>
+
+                                            <li class="p-b-6">
+                                                <a href="{{ request()->fullUrlWithQuery(['price' => 'desc']) }}" class="filter-link stext-106 trans-04">
+                                                    Giá giảm dần
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
                             </div>
 
                         </div>
@@ -101,8 +110,10 @@
                           @endforeach
 
                             </div>
+
                         </section>
                         {{$products->links('paging')}}
+
                     </div>
 
                 </section>
@@ -116,16 +127,15 @@
                                 <div class="sidenav">
                                     <ul>
                                         @foreach($categories as $category)
-                                        <li>
-                                            <button class="dropdown-btn">
-                                            <i class="fa fa-caret-right"></i>  {{$category->name}}
-                                                <i class="fa fa-angle-down"></i>
-                                            </button>
+                                        <li class="lis-ca">
+                                            <a class="link-ca" href="/treeshopHAT/public/danh-muc/{{ $category->id }}-{{ Str::slug($category->name, '-') }}.html"> <i class="fa fa-caret-right icon-ca"></i> {{$category->name}}</a>
+                                                <button class="dropdown-btn btn-ca ca-letf fa fa-angle-down"><i class=""></i>
+                                                </button>
                                             <div class="dropdown-container">
                                                 @foreach($category-> categoryChilden as $categoryChilden)
-                                                <a href="/search/label/{{$categoryChilden->name}}">
-                                                    {{$categoryChilden->name}}
-                                                    @endforeach</a>
+                                                <a href="/treeshopHAT/public/danh-muc/{{ $categoryChilden->id }}-{{ Str::slug($categoryChilden->name, '-') }}.html">
+                                                    {{$categoryChilden->name}}</a>
+                                                    @endforeach
                                             </div>
                                         </li>
                                         @endforeach

@@ -165,7 +165,7 @@
                                                             <div class="ant-single-product-image zoom_pic">
                                                                 <a href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html">
                                                                     <img src="{{ $product->avatar }}" alt="{{ $product->name }}'" class="img-responsive center-block item_thumb" /></a>
-                                                                @if(now()->diffInDays($product->updated_at) < 1)
+                                                                @if(now()->diffInDays($product->updated_at) < 2)
                                                                 <span class="discount-label discount-label--green">New</span>
                                                                 @endif
                                                                 <form action="" class="hover-icons hidden-sm hidden-xs variants form-nut-grid form-ajaxtocart">
@@ -287,7 +287,7 @@
                                                 alt="{{ $product->name }}"
                                                         class="img-responsive center-block item_thumb"
                                                     /></a>
-                                                @if(now()->diffInDays($product->updated_at) < 1)
+                                                @if(now()->diffInDays($product->updated_at) < 2)
                                                 <span class="discount-label discount-label--green">new</span>
                                                 @endif
                                                 <form

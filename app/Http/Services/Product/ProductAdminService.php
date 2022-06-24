@@ -15,8 +15,9 @@ class ProductAdminService
 
 
         public function insert($request){
+
             $isValidPrice = $this->isValidPrice($request);
-            if ($isValidPrice === false) return false;
+            if ($isValidPrice === false ) return false;
 
             try {
                 $request->except('_token');
@@ -48,16 +49,6 @@ class ProductAdminService
 
         return  true;
     }
-    private function isValidQuantity($request)
-    { if ( $request->input('quantity_sold') > $request->input('quantity')
-    ) {
-        Session::flash('error', 'Số lượng bán phải nhỏ hơn số lượng');
-        return false;
-    }
-
-        return  true;
-    }
-
     public function get()
     {
         return Product:: with('category')->

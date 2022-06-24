@@ -14663,7 +14663,7 @@ header.header nav .nav .nav-item:hover > a:before {
 }
 .list-blog-page .box-heading .title-head {
     font-weight: 500;
-    margin: 0;
+
     font-size: 22px;
     text-transform: uppercase;
 }
@@ -19217,7 +19217,7 @@ footer.footer-other {
 }
 
 /* Style the sidenav links and the dropdown button */
-.sidenav a,
+
 .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;

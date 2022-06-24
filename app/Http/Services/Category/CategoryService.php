@@ -83,7 +83,7 @@ class CategoryService
         }
     public function getProductall($request){
         $query = Product::
-            select('id', 'name', 'price', 'price_sale', 'avatar')
+            select('id', 'name', 'price', 'price_sale', 'avatar','updated_at')
             ->where('status', 1);
 
         if ($request->input('price')) {

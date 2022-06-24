@@ -142,14 +142,21 @@
                                                       >
                                                       <div class="price-box clearfix">
                                                          <div class="special-price">
+                                                             @if($product->price_sale != null)
                                                             <span class="price product-price item_price" style="padding-bottom: 6px">
-                                                            {{$product->price_sale}}đ</span><span class="old-price">Giá cũ:
-                                                            <del class="price product-price-old">{{$product->price}}</del>
+
+                                                            {{$product->price_sale}} đ</span><span class="old-price">Giá cũ:
+                                                            <del class="price product-price-old">{{$product->price}} đ</del>
                                                             </span>
                                                             <span class="save-price">Tiết kiệm:
-                                                            <span class="price product-price-save">{{$product->price - $product->price_sale }}đ
+                                                            <span class="price product-price-save">{{$product->price - $product->price_sale }} đ
                                                             </span></span
                                                                >
+                                                             @else
+                                                                 <span class="price product-price item_price" style="padding-bottom: 6px">
+
+                                                            {{$product->price}}đ</span>
+                                                             @endif
                                                          </div>
                                                       </div>
                                                       <div class="inventory_quantity">
@@ -243,14 +250,17 @@
                                                          alt="{{ $product->name }}'"
                                                          class="img-responsive center-block item_thumb"
                                                          /></a>
+                                                       @if(now()->diffInDays($product->updated_at) < 1)
                                                       <span
                                                          class="discount-label discount-label--green"
-                                                         >-31%</span
+                                                         >New</span
                                                          >
+                                                       @endif
                                                       <form
                                                          class="hover-icons hidden-sm hidden-xs variants form-nut-grid form-ajaxtocart"
                                                          >
                                                          <a
+                                                             href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html"
                                                             class="button ajax_addtocart add_to_cart item_add"
                                                             href="javascript:void(0);"
                                                             title="Mua ngay"
@@ -258,8 +268,7 @@
                                                             ></a>
                                                          <a
                                                             class="add-to-cart quick-view quickview"
-                                                            href="https://ant-green-ht.blogspot.com/2019/12/cay-co-nhat-b.html"
-                                                            title="Xem nhanh"
+                                                            href="/treeshopHAT/public/san-pham/{{ $product->id }}-{{ Str::slug($product->name, '-') }}.html"                                                            title="Xem nhanh"
                                                             ></a>
                                                       </form>
                                                    </div>

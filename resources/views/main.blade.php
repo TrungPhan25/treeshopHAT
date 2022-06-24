@@ -4,10 +4,11 @@
 <head>
     @include('head')
 </head>
-<body ><!-- class="animsition" -->
+<body  >
 
-
-
+<div class="spinner">
+<div class="blob blob-0"></div>
+</div>
 <!-- Header -->
 @include('component.header')
 
