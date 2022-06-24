@@ -65,7 +65,9 @@ class CategoriesController extends Controller
             'categories'=>$this->categoryService->getParent()
         ]);
     }
-    public function update(categories $category, CreateFormRequest $request){
+    public function update(categories $category, Request $request){
+
+
         $this->categoryService->update($category,$request);
         return redirect('admin/categories/list');
     }

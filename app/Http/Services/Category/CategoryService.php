@@ -52,6 +52,7 @@ class CategoryService
         return false;
     }
     public function update($category,$request){
+
         if($request->input('list_id') != $category->id){
             $category->list_id=(int)$request->input('list_id');
         }
