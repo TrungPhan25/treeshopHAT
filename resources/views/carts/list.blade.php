@@ -46,7 +46,10 @@
                                     @foreach($products as $key=>$product)
                                         @php
                                             $price = $product->price_sale != 0 ? $product->price_sale : $product->price;
+
                                             $priceEnd = $price * $carts[$product->id];
+                                            if($priceEnd<0)
+                                               $priceEnd=$price ;
                                             $total += $priceEnd;
                                         @endphp
                                         <tr class="table_row">
@@ -65,11 +68,11 @@
                                                     </div>
                                                     <input class="input_w cl3 txt-center num-product bx-10"
                                                            type="number" name="num_product[{{$product->id }}]"
-                                                           @if($carts[$product->id] >=0)
+                                                           @if($carts[$product->id] >0)
                                                            value="{{$carts[$product->id]}}"
-                                                    @elseif($carts[$product->id] < 0)
+                                                    @elseif($carts[$product->id] <= 0)
                                                         value="1"
-                                                    @endif
+                                                    @endif>
                                                     <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                                         <i class="fs-16 zmdi zmdi-plus"></i>
                                                     </div>

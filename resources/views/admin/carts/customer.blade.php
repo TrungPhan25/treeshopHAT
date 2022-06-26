@@ -1,6 +1,75 @@
 @extends('admin.main')
 
 @section('content')
+
+
+    <div class="row">
+
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h3>{{$statisticalOrder}} </h3>
+
+                    <p>Đơn Đặt Hàng Thành Công</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>{{$statisticalWaitOrder}}</h3>
+
+                    <p>Đơn Đã Xác Nhận</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <h3>{{$statisticalNoOrder}}</h3>
+
+                    <p>Đơn Chưa Xác Nhận</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+
+                    <h3>{{ number_format($statisticalPrice, 0, '', '.') }} vnđ</h3>
+                    {{--                    <h3>53<sup style="font-size: 20px">%</sup></h3>--}}
+                    <p>Tổng doanh thu</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+
+            </div>
+        </div>
+<!-- ./col -->
+
+    </div>
+
+
     <table class="table">
         <thead>
         <tr>
@@ -14,7 +83,12 @@
         </tr>
         </thead>
         <tbody>
+
+
+
         @foreach($customers as $key => $customer)
+
+
             <tr>
                 <td>{{ $customer->id }}</td>
                 <td>{{ $customer->name }}</td>

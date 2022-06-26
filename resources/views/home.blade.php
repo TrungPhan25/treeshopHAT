@@ -182,10 +182,10 @@
                                                                 </h3>
                                                                 <div class="product-price">
                                                                     @if($product->price_sale != 0 )
-                                                                    <span class="price item_price">{{$product->price_sale}} VNĐ</span>
-                                                                        <span class="price-before-discount">{{$product->price}} VNĐ</span>
-                                                                       @else
-                                                                        <span class="price item_price">{{$product->price}} VNĐ</span>
+                                                                        <span class="price item_price">{{ number_format($product->price_sale, 0, '', '.') }}  VNĐ</span>
+                                                                        <span class="price-before-discount">  {{ number_format($product->price, 0, '', '.') }}  VNĐ</span>
+                                                                    @else
+                                                                        <span class="price item_price"> {{ number_format($product->price, 0, '', '.') }} VNĐ</span>
                                                                     @endif
 
                                                                 </div>
@@ -511,7 +511,6 @@
             </div>
         </section>
         <div class="clearfix"></div>
-{
     </div>
 </div>
 @endsection

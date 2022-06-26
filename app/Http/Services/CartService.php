@@ -145,12 +145,14 @@ class CartService
     {
         return Customer::orderByDesc('id')->paginate(15);
     }
-
+    
     public function getProductForCart($customer)
     {
         return $customer->carts()->with(['product' => function ($query) {
             $query->select('id', 'name', 'avatar');
         }])->get();
     }
+
+
 }
 

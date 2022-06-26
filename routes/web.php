@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\Admin\Statistical;
 
 
 Route::get('admin/user/login',[LoginController::class, 'index'])->name('login');
@@ -55,6 +56,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('customers', [\App\Http\Controllers\Admin\CartController::class, 'index']);
         Route::get('customers/view/{customer}', [\App\Http\Controllers\Admin\CartController::class, 'show']);
         Route::post('customers/view/{customer}', [\App\Http\Controllers\Admin\CartController::class, 'update']);
+
+        #statistical
+
+        Route::get('statistical',[Statistical::class,'index']);
     });
 });
 
